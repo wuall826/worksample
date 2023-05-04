@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+        #map { height: 100vh; }
+        #decadeSelector { 
+            position: absolute; 
+            top: 20px; right: 40px; 
+            z-index: 1000;
+            font-family: Montserrat, sans-serif;
+         }
+        .leaflet-marker-icon { width: 15px; height: 15px; border: none !important; box-shadow: none !important; } 
+        body {
+            background-color: #f1f1f1;
+            font-family: Montserrat, sans-serif;
+            margin: 0;
+            padding: 0;
+        }   
+    </style>    
+</head>
+<body>
+    <div id="map"></div>
+    <select id="decadeSelector">
+        <option value="2030">2030</option>
+        <option value="2040">2040</option>
+        <option value="2050">2050</option>
+        <option value="2060">2060</option>
+    </select>
+    <script>
+        const assets = <%- assets %>;
+    </script>
+    <script src="map.js"></script>
+</body>
+</html>
